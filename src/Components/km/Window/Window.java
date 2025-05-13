@@ -1,4 +1,4 @@
-package Components.Window;
+package Components.km.Window;
 
 import javax.swing.*;
 

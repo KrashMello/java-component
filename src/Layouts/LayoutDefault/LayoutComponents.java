@@ -9,27 +9,24 @@ import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 
-import Components.Container.Container;
-import Components.Window.ComponentsType;
+import Components.km.Container.Container;
+import Components.km.Window.ComponentsType;
 
-class LayoutComponents {
-
-  public ComponentsType[] components() {
-    ComponentsType[] components = new ComponentsType[1];
-    components[0] = new ComponentsType(mainContainer());
-    return components;
+class LayoutComponents extends ComponentsType {
+  public LayoutComponents() {
+    this.component = containerMain();
   }
 
-  private Container mainContainer() {
+  private Container containerMain() {
     Container container = new Container();
     container.setLayout(new BorderLayout(8, 8));
     container.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
     container.add(centerContainer(), BorderLayout.CENTER);
-    container.add(northContainer(), BorderLayout.NORTH);
+    container.add(containerNorth(), BorderLayout.NORTH);
     return container;
   }
 
-  private Container northContainer() {
+  private Container containerNorth() {
     Container container = new Container();
     container.setLayout(new BorderLayout(8, 8));
     container.setBorder(BorderFactory.createTitledBorder("north Container"));
@@ -75,4 +72,5 @@ class LayoutComponents {
     container.add(new JLabel("label in center center container", JLabel.CENTER), BorderLayout.CENTER);
     return container;
   }
+
 }

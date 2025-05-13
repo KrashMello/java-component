@@ -1,16 +1,16 @@
 package Layouts.LayoutDefault;
 
-import Components.Window.WindowArgs;
+import Components.km.Window.WindowArgs;
 
 import java.awt.Color;
 
-import Components.Window.ComponentsType;
+import Components.km.Window.ComponentsType;
 
 class LayoutWindowArgs extends WindowArgs {
   public LayoutWindowArgs() {
     this.title = "default layout";
     this.heigh = 300;
     this.width = 800;
-    this.components = new LayoutComponents().components();
+    this.components = new ComponentsType[] { new LayoutComponents() };
   }
 }

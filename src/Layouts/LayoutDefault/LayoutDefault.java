@@ -1,7 +1,7 @@
 package Layouts.LayoutDefault;
 
-import Components.Window.*;
-import Components.Container.*;
+import Components.km.Window.*;
+import Components.km.Container.*;
 
 public class LayoutDefault {
   public LayoutDefault() {

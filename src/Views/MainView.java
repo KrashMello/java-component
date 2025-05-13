@@ -1,6 +1,6 @@
 package Views;
 
-import Layouts.LayoutDefault;
+import Layouts.LayoutDefault.*;
 
 public class MainView {
   public MainView() {

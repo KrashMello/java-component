@@ -8,11 +8,12 @@ import java.awt.event.WindowEvent;
 
 public class Window extends JFrame {
   public Window(WindowArgs args) {
-    setSize(args.width, args.heigh);
+    setPreferredSize(new Dimension(args.width, args.heigh));
     setUndecorated(true);
     setLocationRelativeTo(null);
     setTitle(args.title);
-    setBackground(Color.DARK_GRAY);
+    getContentPane().setBackground(args.background);
+    setLayout(new BorderLayout());
     addWindowListener(new WindowAdapter() {
       @Override
       public void windowClosing(WindowEvent e) {

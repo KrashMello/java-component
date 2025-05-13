@@ -1,24 +1,12 @@
 package Components.Window;
 
+import java.awt.Color;
+
 public class WindowArgs {
-  String title = "title";
-  Integer width = 300;
-  Integer heigh = 300;
-  ComponentsType[] components = null;
+  protected String title = "title";
+  protected Integer width = 300;
+  protected Integer heigh = 300;
+  protected Color background = Color.DARK_GRAY;
+  protected ComponentsType[] components = null;
 
-  public void setTitle(String title) {
-    this.title = title;
-  }
-
-  public void setHeigh(Integer heigh) {
-    this.heigh = heigh;
-  }
-
-  public void setWidth(Integer width) {
-    this.width = width;
-  }
-
-  public void setComponents(ComponentsType[] components) {
-    this.components = components;
-  }
 }

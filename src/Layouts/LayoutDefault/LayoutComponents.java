@@ -19,8 +19,6 @@ class LayoutComponents extends ComponentsType {
 
   private Container containerMain() {
     Container container = new Container();
-    container.setLayout(new BorderLayout(8, 8));
-    container.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
     container.add(centerContainer(), BorderLayout.CENTER);
     container.add(containerNorth(), BorderLayout.NORTH);
     return container;
@@ -28,8 +26,7 @@ class LayoutComponents extends ComponentsType {
 
   private Container containerNorth() {
     Container container = new Container();
-    container.setLayout(new BorderLayout(8, 8));
-    container.setBorder(BorderFactory.createTitledBorder("north Container"));
+    container.setBorderTitle("north container");
     container.add(buttonContainer(), BorderLayout.EAST);
     return container;
   }
@@ -50,7 +47,6 @@ class LayoutComponents extends ComponentsType {
 
   private Container centerContainer() {
     Container container = new Container();
-    container.setLayout(new BorderLayout());
     container.setBorder(BorderFactory.createTitledBorder("center Container"));
     container.add(leftContainer(), BorderLayout.WEST);
     container.add(centerInCenterContainer(), BorderLayout.CENTER);
@@ -59,7 +55,6 @@ class LayoutComponents extends ComponentsType {
 
   private Container leftContainer() {
     Container container = new Container();
-    container.setLayout(new BorderLayout());
     container.setBorder(BorderFactory.createTitledBorder("left Container"));
     container.add(new JLabel("label in left container", JLabel.CENTER), BorderLayout.CENTER);
     return container;
@@ -67,7 +62,6 @@ class LayoutComponents extends ComponentsType {
 
   private Container centerInCenterContainer() {
     Container container = new Container();
-    container.setLayout(new BorderLayout());
     container.setBorder(BorderFactory.createTitledBorder("center in center Container"));
     container.add(new JLabel("label in center center container", JLabel.CENTER), BorderLayout.CENTER);
     return container;

@@ -10,6 +10,7 @@ public class Container extends JPanel {
   public Container() {
     setLayout(new BorderLayout());
     setBackground(Color.DARK_GRAY);
+    setForeground(Color.WHITE);
     // if (args.components != null) {
     // for (ComponentsType components : args.components) {
     // if (components.borderLayout == null) {
@@ -26,6 +27,6 @@ public class Container extends JPanel {
   }
 
   public void setBorderless() {
-    setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+    setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
   }
 }

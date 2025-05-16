@@ -6,9 +6,9 @@ import java.awt.Dimension;
 import java.awt.GridLayout;
 
 import javax.swing.BorderFactory;
-import javax.swing.JButton;
 import javax.swing.JLabel;
 
+import Components.km.Button.Button;
 import Components.km.Container.Container;
 import Components.km.Window.ComponentsType;
 
@@ -33,15 +33,9 @@ class LayoutComponents extends ComponentsType {
 
   private Container buttonContainer() {
     Container container = new Container();
-    JButton closeButton = new JButton("X");
-    closeButton.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
-    closeButton.setForeground(Color.WHITE);
-    closeButton.setFocusPainted(false);
+    Button closeButton = new Button("X");
     closeButton.addActionListener(e -> System.exit(0));
-    closeButton.setBackground(Color.RED);
-    closeButton.setPreferredSize(new Dimension(30, 30));
-    container.setLayout(new GridLayout(0, 1, 0, 8));
-    container.add(closeButton);
+    container.add(closeButton, BorderLayout.EAST);
     return container;
   }
 
